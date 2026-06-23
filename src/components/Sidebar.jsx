@@ -10,6 +10,7 @@ const NAV = [
     items: [
       { id: 'projects',     icon: '⚡', label: 'Project Dashboard' },
       { id: 'market',       icon: '📊', label: 'Market Data' },
+      { id: 'moer',         icon: '⏱️', label: 'MOER Explorer' },
       { id: 'intelligence', icon: '🔬', label: 'Market Intelligence' },
     ],
   },

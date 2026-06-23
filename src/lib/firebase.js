@@ -32,3 +32,38 @@
 // }
 
 export const FIREBASE_CONNECTED = false;
+
+// Once Firebase is configured, this is the expected shape of the real query.
+// Swap the mock fallback in moerMock.js for this once VITE_FIREBASE_* env vars
+// and the Firestore collection/field names below are confirmed.
+//
+// Expected collection layout (confirm against your actual schema):
+//   collection: 'moer_readings'
+//   fields: { ba: string, timestamp: Timestamp, moer: number }
+//
+// import { initializeApp } from 'firebase/app';
+// import { getFirestore, collection, query, where, orderBy, getDocs, Timestamp } from 'firebase/firestore';
+//
+// const firebaseConfig = {
+//   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+//   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+//   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+//   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+//   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+//   appId: import.meta.env.VITE_FIREBASE_APP_ID,
+// };
+//
+// const app = initializeApp(firebaseConfig);
+// export const db = getFirestore(app);
+//
+// export async function fetchMoerData(ba, startDate, endDate) {
+//   const q = query(
+//     collection(db, 'moer_readings'),
+//     where('ba', '==', ba),
+//     where('timestamp', '>=', Timestamp.fromDate(startDate)),
+//     where('timestamp', '<=', Timestamp.fromDate(endDate)),
+//     orderBy('timestamp')
+//   );
+//   const snapshot = await getDocs(q);
+//   return snapshot.docs.map(doc => doc.data());
+// }
